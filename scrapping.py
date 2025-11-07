@@ -43,12 +43,21 @@ def build_wide_table(headers_df, facts_df):
     return wide_df
 
 if __name__ == "__main__":
-    for grp in ("SDG3", "SDG_GPW"):
-        headers_df = get_headers(grp)
-        facts_df = get_facts(grp)
-        table_df = build_wide_table(headers_df, facts_df)
-        # Sauvegarder
-        table_df.to_csv(f"WHO_'{grp}'_COUNTRY_2025.csv", index=False)
-    print(table_df.columns)
+
+    headers_df_sdg3 = get_headers("SDG3")
+    facts_df_sdg3 = get_facts("SDG3")
+    table_df_sdg3 = build_wide_table(headers_df_sdg3, facts_df_sdg3)
+
+    # Sauvegarder
+    table_df_sdg3.to_csv(f"WHO_SDG3_COUNTRY_2025.csv", index=False)
+
+    headers_df_sdg_gpw = get_headers("SDG_GPW")
+    facts_df_sdg_gpw = get_facts("SDG_GPW")
+    table_df_sdg_gpw = build_wide_table(headers_df_sdg_gpw, facts_df_sdg_gpw)
+    table_df_sdg_gpw_select = table_df_sdg_gpw[['LOCATION', 'NUTOVERWEIGHTPREV', 'GHED_GGHE_DGGE_SHA2011', 'NUTRITION_ANAEMIA_REPRODUCTIVEAGE_PREV', 'SDGPM25', 'SDGODAWS', 'WSH_WATER_SAFELY_MANAGED', 'PHE_HHAIR_PROP_POP_CLEAN_FUELS', 'SDGIPV12M', 'VIOLENCE_HOMICIDERATE', 'NUTRITION_WH_2', 'NUTSTUNTINGPREV', 'WSH_HYGIENE_BASIC', 'SDGIPVLT', 'WSH_DOMESTIC_WASTE_SAFELY_TREATED', 'WSH_SANITATION_SAFELY_MANAGED']]
+    # Sauvegarder
+    table_df_sdg_gpw_select.to_csv(f"WHO_SDG_GPW_SELECT_COUNTRY_2025.csv", index=False)
+
+
 
     
