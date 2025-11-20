@@ -1,0 +1,39 @@
+import csv
+import os
+
+def somme_colonne_espérance_de_vie(fichier_csv):
+    # Vérifie si le fichier existe
+    if not os.path.exists(fichier_csv):
+        raise FileNotFoundError(f"Le fichier '{fichier_csv}' est introuvable. Vérifie le chemin.")
+
+    somme = 0.0
+    total = 0.0
+    with open(fichier_csv, mode='r', encoding='utf-8') as fichier:
+        lecteur_csv = csv.reader(fichier)
+        next(lecteur_csv)  # Ignore la première ligne (en-tête)
+
+        for i, ligne in enumerate(lecteur_csv, start=2):  # Commence à compter à partir de la ligne 2
+            try:
+                # Vérifie si la ligne a assez de colonnes
+                if len(ligne) <= 35:
+                    print(f"Attention : La ligne {i} est incomplète (moins de 36 colonnes). Valeur ignorée.")
+                    continue
+
+                # Convertit la valeur en float et l'ajoute à la somme
+                valeur = float(ligne[35])
+                somme += valeur
+                total = total+1
+            except ValueError:
+                print(f"Attention : La valeur '{ligne[35]}' à la ligne {i} n'est pas un nombre. Valeur ignorée.")
+
+    return (somme/total, total)
+
+# Exemple d'utilisation avec le chemin mis à jour
+try:
+    fichier = "/home/onyxia/work/python-DATA/Données_OMS/WHO_SDG3_SELECT_COUNTRY_2025.csv"
+    resultat = somme_colonne_espérance_de_vie(fichier)
+    print(f"La somme des valeurs de la colonne 36 (à partir de la ligne 2) est : {resultat}")
+except Exception as e:
+    print(f"Erreur : {e}")
+
+
