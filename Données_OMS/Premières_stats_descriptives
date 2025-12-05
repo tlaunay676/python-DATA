@@ -1,0 +1,26 @@
+#Moyenne espérance de vie, autres variables d'intérêt
+import csv
+#on met le fichier ou se trouve la variable d'intérêt dans le premier argument, le numéro de colonne (0 si c'est la première) où elle se trouve dans la deuxième
+def moyenne(fichier_csv,numero_colonne):
+    somme = 0.0
+    nombre=0
+    with open(fichier_csv, mode='r', encoding='utf-8') as fichier:
+        lecteur_csv = csv.reader(fichier)
+        next(lecteur_csv)  # Ignorer la première ligne (en-tête)
+        for ligne in lecteur_csv:
+            try:
+                valeur = float(ligne[numero_colonne])  # Index 35 pour la colonne 36
+                somme += valeur
+                nombre= nombre+1
+            except (ValueError, IndexError):
+                print(f"Attention : une valeur non numérique ou une ligne incomplète a été ignorée : {ligne}")
+    return somme/nombre
+
+#Mediane variables d'intérêt
+def mediane(fichier_csv,numero_colonne):
+    
+# Exemple d'utilisation
+fichier = "WHO_SDG3_SELECT_COUNTRY_2025.csv"
+resultat = moyenne(fichier,35)
+print(f"La somme des valeurs de la colonne 36 (à partir de la ligne 2) est : {resultat}")
+
