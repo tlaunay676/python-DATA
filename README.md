@@ -33,7 +33,7 @@ Le premier objectif est de créer un jeu de données propre, harmonisé et explo
 ## 2.Données OCDE (PIB + Taux de pauvreté)
 
 - Téléchargement des données en CSV (Utiliser l'API serait à terme le plus intéressant)
- Standardisation des colonnes (noms, formats, types numériques). 
+- Standardisation des colonnes (noms, formats, types numériques). 
 - Nettoyage :
   - gestion des valeurs manquantes,
   - conversion en format numérique,
