@@ -20,10 +20,20 @@ Le premier objectif est de créer un jeu de données propre, harmonisé et explo
 
 ## 1. Scraping des données OMS
 
-### Étapes
 - Requête HTTP vers les pages ou endpoints contenant les tables OMS.
 - Extraction automatique des tableaux via **BeautifulSoup**.
 - Standardisation des colonnes (noms, formats, types numériques). 
+- Nettoyage :
+  - gestion des valeurs manquantes,
+  - conversion en format numérique,
+  - harmonisation des codes pays.
+
+---
+
+## 2.Données OCDE (PIB + Taux de pauvreté)
+
+- Téléchargement des données en CSV (Utiliser l'API serait à terme le plus intéressant)
+ Standardisation des colonnes (noms, formats, types numériques). 
 - Nettoyage :
   - gestion des valeurs manquantes,
   - conversion en format numérique,
