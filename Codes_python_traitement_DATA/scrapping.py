@@ -117,7 +117,7 @@ if __name__ == "__main__":
     ]
 
     # Export CSV (cours : "écrire un fichier après scraping")
-    table_df_sdg3_select.to_csv("WHO_SDG3_SELECT_COUNTRY_2025.csv", index=False)
+    table_df_sdg3_select.to_csv("/home/onyxia/python-DATA-1/Données_OMS/WHO_SDG3_SELECT_COUNTRY_2025.csv", index=False)
 
 
 
@@ -137,4 +137,4 @@ if __name__ == "__main__":
     ]
 
     # Export CSV
-    table_df_sdg_gpw_select.to_csv("WHO_SDG_GPW_SELECT_COUNTRY_2025.csv", index=False)
+    table_df_sdg_gpw_select.to_csv("WHO_SDG_GPW_SE/home/onyxia/python-DATA-1/Données_OMS/WHO_SDG_GPW_SELECT_COUNTRY_2025.csv", index=False)
