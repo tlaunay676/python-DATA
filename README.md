@@ -23,7 +23,7 @@ Le premier objectif est de créer un jeu de données propre, harmonisé et explo
 ### Étapes
 - Requête HTTP vers les pages ou endpoints contenant les tables OMS.
 - Extraction automatique des tableaux via **BeautifulSoup**.
-- Standardisation des colonnes (noms, formats, types numériques). (à faire car tableau illisible pour quelqu'un n'ayant pas travailler dessus)
+- Standardisation des colonnes (noms, formats, types numériques). 
 - Nettoyage :
   - gestion des valeurs manquantes,
   - conversion en format numérique,
