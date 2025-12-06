@@ -6,10 +6,7 @@ input_file1 = "/home/onyxia/python-DATA/Données_taux_pauvreté/Données_taux_pa
 
 
 # Colonnes à conserver
-colonnes = [
-    "Country Name","Country Code","Indicator Name","Indicator Code",
-    "2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"
-]
+colonnes = ["Country Name","Country Code","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"]
 
 # Lecture du CSV
 df = pd.read_csv(input_file)
