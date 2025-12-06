@@ -7,7 +7,7 @@ df_PIB = pd.read_csv('/home/onyxia/python-DATA-1/Données_PIB/Données_PIB_habit
 
 # MERGE GPW + SDG3
 
-keys_oms = ['Pays_code_iso3']
+keys_oms = ['LOCATION','Pays_code_iso3']
 
 missing_keys = [k for k in keys_oms if k not in df_gpw.columns or k not in df_sdg3.columns]
 if missing_keys:
