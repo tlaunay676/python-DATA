@@ -1,0 +1,89 @@
+#scrapping santé mentale
+import requests
+import pandas as pd
+import io
+
+# ---------------------------------------------------------
+# CONFIGURATION
+# ---------------------------------------------------------
+# L'URL de base pour les exports CSV des graphiques Our World in Data.
+# Le "slug" correspond à la fin de l'URL de la page du graphique sur leur site.
+BASE_URL = "https://ourworldindata.org/grapher/"
+CHART_SLUG = "burden-of-disease-from-each-category-of-mental-illness"
+
+def get_owid_data(slug):
+    """
+    Récupère le fichier CSV complet associé à un graphique OWID.
+    --> Correspond à la partie 'Interroger une API / Récupérer la donnée brute'.
+    """
+    # Construction de l'URL (OWID expose les CSV via /grapher/slug.csv)
+    url = f"{BASE_URL}{slug}.csv"
+    
+    print(f"Requête vers : {url}")
+    
+    # Envoi de la requête HTTP GET
+    resp = requests.get(url)
+    
+    # Vérification des erreurs HTTP (404, 500, etc.)
+    resp.raise_for_status()
+    
+    # Conversion du contenu CSV (texte) en DataFrame pandas.
+    # On utilise io.StringIO car pd.read_csv attend un fichier ou un buffer, pas une simple string.
+    return pd.read_csv(io.StringIO(resp.content.decode('utf-8')))
+
+def process_mental_health_data(df, target_year=2021):
+    """
+    Nettoie et filtre les données pour ne garder que l'année cible.
+    --> Correspond à la partie transformation et nettoyage.
+    """
+    
+    # 1. Filtrage temporel : on ne veut que l'année 2021
+    df_filtered = df[df['Year'] == target_year].copy()
+    
+    # 2. Nettoyage : On supprime la colonne 'Year' car elle est maintenant constante
+    # On garde 'Entity' (Pays), 'Code' (Code ISO, utile pour les jointures), et les maladies.
+    df_filtered = df_filtered.drop(columns=['Year'])
+    
+    # 3. Renommage des colonnes pour faciliter l'analyse statistique (éviter les espaces et parenthèses)
+    # Exemple : "Depressive disorders (DALYs)" -> "Depressive_disorders"
+    # Cela rendra l'écriture de tes formules de régression plus simple (ex: smf.ols('Y ~ X'))
+    df_filtered.columns = [
+        col.replace(' (DALYs)', '')       # Enlever l'unité
+           .replace(' ', '_')             # Remplacer espaces par _
+           .replace('-', '_')             # Remplacer tirets par _
+        for col in df_filtered.columns
+    ]
+    
+    # 4. Gestion des entités non-pays (OWID inclut des régions comme "World", "Africa", etc.)
+    # Si tu ne veux que les pays qui ont un Code ISO (pour exclure les agrégats régionaux) :
+    df_countries_only = df_filtered.dropna(subset=['Code'])
+    
+    return df_countries_only
+
+# ---------------------------------------------------------
+# PARTIE PRINCIPALE (MAIN)
+# ---------------------------------------------------------
+
+if __name__ == "__main__":
+    
+    print("--- Démarrage du scraping OWID ---")
+
+    # 1. Extraction (Scraping)
+    # Contrairement à l'OMS, on reçoit tout en un seul morceau.
+    raw_df = get_owid_data(CHART_SLUG)
+    print(f"Données brutes récupérées : {raw_df.shape[0]} lignes.")
+
+    # 2. Transformation
+    clean_df = process_mental_health_data(raw_df, target_year=2021)
+    print(f"Données filtrées (2021, pays uniquement) : {clean_df.shape[0]} lignes.")
+    
+    # Aperçu des colonnes disponibles pour tes régressions
+    print("\nColonnes disponibles pour l'analyse :")
+    print(clean_df.columns.tolist())
+
+    # 3. Chargement (Export CSV)
+    output_path = "OWID_Mental_Health_Burden_2021.csv"
+    clean_df.to_csv(output_path, index=False)
+    
+    print(f"\nFichier sauvegardé avec succès : {output_path}")
+    print("Prêt pour l'analyse sur VS Code.")
