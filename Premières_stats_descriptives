@@ -72,3 +72,51 @@ plt.xlabel('Log(PIB)')
 plt.ylabel('Espérance de vie totale')
 plt.legend()
 plt.show()
+
+#régression linéaire multiple: Y=a+b*log(X)+c*G
+import numpy as np
+import pandas as pd
+import statsmodels.api as sm
+
+# 1. Chargement
+# Si tes décimales sont des virgules, ajoute decimal=',' dans la parenthèse
+df = pd.read_csv('Table_complète.csv') 
+
+# --- A MODIFIER SELON TON FICHIER ---
+nom_colonne_Y = 'Espérance de vie totale'
+nom_colonne_D = '2022'             # Variable qui sera passée en log
+nom_colonne_G = 'Médecins pour 10k habitants'   # TA 2ème VARIABLE (ex: 'Education', 'Chomage')
+# ------------------------------------
+
+# 2. Nettoyage et Conversion (Pour les 3 variables)
+cols_to_check = [nom_colonne_Y, nom_colonne_D, nom_colonne_G]
+
+# On force tout en numérique
+for col in cols_to_check:
+    df[col] = pd.to_numeric(df[col], errors='coerce')
+
+# On supprime les lignes vides (Si une seule des 3 valeurs manque, on supprime la ligne)
+df = df.dropna(subset=cols_to_check)
+
+# On filtre les valeurs <= 0 pour la variable qui va passer au Log (PIB)
+df = df[df[nom_colonne_D] > 0]
+
+# 3. Transformation des variables
+df['log_PIB'] = np.log(df[nom_colonne_D]) # Ton D
+# Si tu ne transformes pas G, on la garde telle quelle
+
+# 4. Définition de Y et X (Multiple)
+Y = df[nom_colonne_Y]
+
+# C'est ICI que ça change : on sélectionne plusieurs colonnes avec des double crochets [[ ]]
+X = df[['log_PIB', nom_colonne_G]] 
+
+# 5. Ajout de la constante (le vecteur 1)
+# X devient une matrice avec 3 colonnes : (1, log_PIB, G)
+X_with_const = sm.add_constant(X)
+
+# 6. Régression
+modele = sm.OLS(Y, X_with_const)
+resultats = modele.fit()
+
+print(resultats.summary())
