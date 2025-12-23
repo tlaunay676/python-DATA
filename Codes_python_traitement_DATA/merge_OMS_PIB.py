@@ -1,9 +1,9 @@
 import pandas as pd
 
 # Chargement des trois fichiers
-df_gpw = pd.read_csv('/home/onyxia/python-DATA-1/Données_OMS/WHO_SDG_GPW_standardisé_avec_code_pays_complet.csv')
-df_sdg3 = pd.read_csv('/home/onyxia/python-DATA-1/Données_OMS/WHO_SDG3_standardisé_avec_code_pays_complet.csv')
-df_PIB = pd.read_csv('/home/onyxia/python-DATA-1/Données_PIB/Données_PIB_habitant_2015_2024.csv')
+df_gpw = pd.read_csv('/home/onyxia/python-DATA/Données_OMS/WHO_SDG_GPW_standardisé_avec_code_pays_complet.csv')
+df_sdg3 = pd.read_csv('/home/onyxia/python-DATA/Données_OMS/WHO_SDG3_standardisé_avec_code_pays_complet.csv')
+df_PIB = pd.read_csv('/home/onyxia/python-DATA/Données_PIB/Données_PIB_habitant_2015_2024.csv')
 
 # MERGE GPW + SDG3
 
