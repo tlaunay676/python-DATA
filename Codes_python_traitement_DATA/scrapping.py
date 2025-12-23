@@ -77,12 +77,7 @@ def build_wide_table(headers_df, facts_df):
     wide_df = pd.DataFrame.from_records(list(wide_records.values()))
     return wide_df
 
-
-
-# ---------------------------------------------------------
-# PARTIE PRINCIPALE : correspond à la section du cours
-# « Structurer son scraping dans un main ».
-# ---------------------------------------------------------
+# PARTIE PRINCIPALE
 
 if __name__ == "__main__":
 
