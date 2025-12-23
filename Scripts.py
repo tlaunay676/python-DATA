@@ -1,6 +1,9 @@
 import requests
 import pandas as pd
 
+
+# Données OMS
+
 # L'API utilisée correspond à une interface "REST" renvoyant du JSON.
 # Comme dans le cours, on va envoyer une requête HTTP GET et convertir la réponse en DataFrame.
 BASE_URL = "https://xmart-api-public.who.int/DEX_CMS/"
@@ -77,15 +80,7 @@ def build_wide_table(headers_df, facts_df):
     wide_df = pd.DataFrame.from_records(list(wide_records.values()))
     return wide_df
 
-
-
-# ---------------------------------------------------------
-# PARTIE PRINCIPALE : correspond à la section du cours
-# « Structurer son scraping dans un main ».
-# ---------------------------------------------------------
-
-if __name__ == "__main__":
-
+def get_data_health():
     # 1. Scraping du groupe SDG3 (OMS Objectifs de développement durable)
     headers_df_sdg3 = get_headers("SDG3")
     facts_df_sdg3 = get_facts("SDG3")
@@ -93,16 +88,10 @@ if __name__ == "__main__":
     # Transformation en tableau large
     table_df_sdg3 = build_wide_table(headers_df_sdg3, facts_df_sdg3)
 
-    # Export CSV (cours : "écrire un fichier après scraping")
-    table_df_sdg3.to_csv("/home/onyxia/python-DATA/Données_OMS/WHO_SDG3_COUNTRY_2025.csv", index=False)
-
-
-
     # 2. Scraping du groupe SDG_GPW (global programme of work)
     headers_df_sdg_gpw = get_headers("SDG_GPW")
     facts_df_sdg_gpw = get_facts("SDG_GPW")
 
     table_df_sdg_gpw = build_wide_table(headers_df_sdg_gpw, facts_df_sdg_gpw)
 
-    # Export CSV
-    table_df_sdg_gpw.to_csv("/home/onyxia/python-DATA/Données_OMS/WHO_SDG_GPW_COUNTRY_2025.csv", index=False)
+    return table_df_sdg3, table_df_sdg_gpw
