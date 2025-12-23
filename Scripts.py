@@ -81,17 +81,20 @@ def build_wide_table(headers_df, facts_df):
     return wide_df
 
 def get_data_health():
-    # 1. Scraping du groupe SDG3 (OMS Objectifs de développement durable)
+    """
+    Récupère et construit les DataFrames OMS pour SDG3 et SDG_GPW.
+    Renvoie un dictionnaire avec les DataFrames pour pouvoir les utiliser ailleurs.
+    """
+
+    # 1. Groupe SDG3
     headers_df_sdg3 = get_headers("SDG3")
     facts_df_sdg3 = get_facts("SDG3")
-
-    # Transformation en tableau large
     table_df_sdg3 = build_wide_table(headers_df_sdg3, facts_df_sdg3)
 
-    # 2. Scraping du groupe SDG_GPW (global programme of work)
+    # 2. Groupe SDG_GPW
     headers_df_sdg_gpw = get_headers("SDG_GPW")
     facts_df_sdg_gpw = get_facts("SDG_GPW")
-
     table_df_sdg_gpw = build_wide_table(headers_df_sdg_gpw, facts_df_sdg_gpw)
 
-    return table_df_sdg3, table_df_sdg_gpw
+    # Retourne les DataFrames dans un dictionnaire
+    return table_df_sdg_gpw
