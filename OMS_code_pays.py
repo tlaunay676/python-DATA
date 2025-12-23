@@ -64,9 +64,8 @@ def get_data_health_with_iso():
 
     return {"SDG3": df_sdg3, "SDG_GPW": df_sdg_gpw}
 
-# -------------------------------
 # Exécution
-# -------------------------------
+
 if __name__ == "__main__":
     dfs = get_data_health_with_iso()
 
