@@ -7,7 +7,7 @@ import sys
 # ==========================================
 
 # Le nom de ton fichier (doit être dans le même dossier)
-FICHIER_CSV = 'Données_taux_pauvreté/Table_groupes_pays_richesse.csv'
+FICHIER_CSV = 'Table_groupes_pays_richesse.csv'
 
 # Argument 1 : La colonne pour faire les groupes (ex: Pays riches, pauvres...)
 COLONNE_GROUPE = 'IncomeGroup'
