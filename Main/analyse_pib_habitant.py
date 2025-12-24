@@ -3,6 +3,7 @@ import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.cluster import KMeans
+import numpy as np
 
 def plot_missing_gdp(data, col = "GDP_per_capita"):
     """
