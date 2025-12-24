@@ -1,47 +1,53 @@
 import requests
 import pandas as pd
 
-def fetch_worldbank_indicator(indicator_code, start_year=None, end_year=None, format="json"):
+def get_gdp_per_capita(start_year=2015, end_year=2024, indicator="NY.GDP.PCAP.CD"):
     """
-    Récupère les données d'un indicateur de la Banque mondiale pour tous les pays.
-    
-    indicator_code: code de l'indicateur (ex. "NY.GDP.PCAP.CD")
-    start_year, end_year: plage de dates souhaitée (optionnel)
+    Récupère le PIB par habitant (Banque mondiale)
+    et retourne un DataFrame au format :
+    Country Name | Country Code | 2015 | ... | 2024
     """
-    base_url = "https://api.worldbank.org/v2/country/all/indicator/"
+
+    url = f"https://api.worldbank.org/v2/country/all/indicator/{indicator}"
     params = {
-        "format": format,
-        "per_page": 20000  # suffisamment grand pour obtenir tous les pays / années
+        "format": "json",
+        "per_page": 20000,
+        "date": f"{start_year}:{end_year}"
     }
-    
-    if start_year:
-        params["date"] = f"{start_year}:{end_year or ''}"
 
-    url = f"{base_url}{indicator_code}"
-    response = requests.get(url, params=params)
-    response.raise_for_status()
+    r = requests.get(url, params=params)
+    r.raise_for_status()
 
-    # la réponse JSON vient en deux parties : 
-    # - index 0 : métadonnées,
-    # - index 1 : données
-    data = response.json()
-    if len(data) < 2:
-        raise ValueError("Pas de données retournées par l'API.")
-    
-    return pd.DataFrame(data[1])
+    data = r.json()[1]
+    df = pd.DataFrame(data)
 
-# Exemple : récupérer le PIB par habitant (NY.GDP.PCAP.CD)
-df_gdp_per_capita = fetch_worldbank_indicator("NY.GDP.PCAP.CD", start_year=2015, end_year=2024)
+    df["Country Name"] = df["country"].apply(
+        lambda x: x["value"] if isinstance(x, dict) else None
+    )
 
-# Nettoyage / sélection de colonnes utiles
-df_gdp_per_capita = df_gdp_per_capita[[
-    "countryiso3code", "country", "date", "value"
-]].rename(columns={
-    "countryiso3code": "ISO3",
-    "country": "Country",
-    "date": "Year",
-    "value": "GDP_per_capita_USD"
-})
+    df = df[["Country Name", "countryiso3code", "date", "value"]]
+    df.columns = ["Country Name", "Country Code", "Year", "GDP_per_capita"]
 
-# Affichage propre
-print(df_gdp_per_capita.head())
+    # Pivot années → colonnes
+    df_wide = (
+        df.pivot(
+            index=["Country Name", "Country Code"],
+            columns="Year",
+            values="GDP_per_capita"
+        )
+        .reset_index()
+    )
+
+    # Trier les colonnes années
+    year_cols = sorted(
+        [c for c in df_wide.columns if c.isdigit()],
+        key=int
+    )
+
+    df_wide = df_wide[["Country Name", "Country Code"] + year_cols]
+
+    return df_wide
+
+df = get_gdp_per_capita()
+
+df.to_csv("/home/onyxia/python-DATA/Données_PIB/Données_PIB_habitant_2015_2024.csv", index = False)
