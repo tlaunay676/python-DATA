@@ -81,4 +81,4 @@ def get_gdp_per_capita(start_year=2015, end_year=2024, indicator="NY.GDP.PCAP.CD
 
 df = get_gdp_per_capita_wide()
 
-df.to_csv("/home/onyxia/python-DATA/Données_PIB/Données_PIB_habitant_2015_2024.csv", index = False)
+df.to_csv("/home/onyxia/work/python-DATA/Données_PIB/Données_PIB_habitant_2015_2024.csv", index = False)

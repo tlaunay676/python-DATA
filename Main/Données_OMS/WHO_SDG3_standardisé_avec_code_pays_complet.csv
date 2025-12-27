@@ -1,196 +1,196 @@
-LOCATION,Pays_code_iso3,Espérance de vie totale,Taux mortalité brute,Médecins pour 10k habitants,Taux de suicides
-Afghanistan,AFG,59.1,34.3,0.06,3.6
-Albania,ALB,76.4,6.9,10.27,2.8
-Algeria,DZA,76.0,15.3,3.57,2.2
-Andorra,AND,,1.3,12.11,
-Angola,AGO,62.1,25.6,0.07,8.1
-Antigua and Barbuda,ATG,76.9,5.4,,1.5
-Argentina,ARG,74.6,5.0,10.86,7.9
-Armenia,ARM,73.0,5.3,3.59,2.5
-Australia,AUS,83.1,2.3,6.41,13.1
-Austria,AUT,81.0,2.0,6.19,14.5
-Azerbaijan,AZE,72.9,12.8,3.38,1.6
-Bahamas,BHS,70.4,9.2,2.54,3.3
-Bahrain,BHR,74.4,4.4,0.8,4.7
-Bangladesh,BGD,73.1,17.9,0.76,2.8
-Barbados,BRB,76.8,6.9,3.14,3.5
-Belarus,BLR,73.1,0.8,6.09,15.6
-Belgium,BEL,81.5,2.1,11.92,18.4
-Belize,BLZ,73.3,9.3,1.71,4.2
-Benin,BEN,64.0,28.0,0.05,7.1
-Bhutan,BTN,74.9,12.7,0.97,4.9
-Bolivia,BOL,65.4,12.2,2.29,4.2
-Bosnia and Herzegovina,BIH,74.8,4.5,2.58,9.0
-Botswana,BWA,61.2,20.9,0.36,8.4
-Brazil,BRA,72.4,7.6,7.45,7.6
-Brunei Darussalam,BRN,76.9,4.9,2.35,3.0
-Bulgaria,BGR,71.3,2.6,11.23,9.5
-Burkina Faso,BFA,62.3,24.5,0.06,8.5
-Burundi,BDI,64.0,19.6,0.01,7.7
-Cabo Verde,CPV,73.2,8.3,0.15,14.9
-Cambodia,KHM,68.9,11.8,0.31,4.5
-Cameroon,CMR,61.8,25.2,0.12,8.5
-Canada,CAN,81.6,3.4,6.53,9.4
-Central African Republic,CAF,52.3,30.7,0.01,9.2
-Chad,TCD,59.1,31.4,0.01,5.2
-Chile,CHL,79.0,4.6,16.77,7.7
-China,CHN,77.6,2.8,4.51,8.9
-Colombia,COL,74.5,6.5,8.68,5.0
-Comoros,COM,67.5,22.5,0.38,6.0
-Congo,COG,63.2,17.7,0.02,6.7
-Costa Rica,CRI,78.6,7.2,10.89,8.1
-Croatia,HRV,76.9,2.8,9.46,15.7
-Cuba,CUB,73.7,4.2,18.42,13.8
-Cyprus,CYP,81.9,1.9,8.19,3.0
-Czechia,CZE,77.1,1.3,7.39,13.3
-Côte d'Ivoire,CIV,63.5,28.2,0.14,7.4
-Democratic People's Republic of Korea,PRK,72.6,9.6,2.17,9.3
-Democratic Republic of the Congo,COD,61.6,25.3,0.04,8.8
-Denmark,DNK,81.2,1.8,7.18,10.5
-Djibouti,DJI,64.9,28.2,,8.0
-Dominica,DMA,,30.8,1.17,
-Dominican Republic,DOM,73.3,21.7,2.69,4.2
-Ecuador,ECU,74.0,7.1,3.0,7.6
-Egypt,EGY,69.1,9.3,1.87,0.6
-El Salvador,SLV,71.7,4.4,1.57,7.6
-Equatorial Guinea,GNQ,61.6,27.2,,7.0
-Eritrea,ERI,63.6,16.4,0.2,13.2
-Estonia,EST,77.1,1.0,10.18,14.9
-Eswatini,SWZ,54.6,24.5,0.28,27.2
-Ethiopia,ETH,67.8,27.4,0.28,6.1
-Fiji,FJI,65.5,14.9,1.17,8.3
-Finland,FIN,81.5,1.3,9.68,14.6
-France,FRA,81.9,2.7,6.94,16.6
-Gabon,GAB,65.1,16.8,0.18,7.3
-Gambia,GMB,64.2,23.7,0.03,4.8
-Georgia,GEO,71.2,5.3,7.74,5.1
-Germany,DEU,80.5,2.3,8.48,12.9
-Ghana,GHA,66.1,21.2,0.07,5.3
-Greece,GRC,79.6,2.3,13.35,4.7
-Grenada,GRD,72.8,12.4,1.9,1.3
-Guatemala,GTM,68.7,10.0,2.68,4.9
-Guinea,GIN,61.3,30.3,0.03,4.8
-Guinea-Bissau,GNB,58.6,32.7,0.1,7.7
-Guyana,GUY,66.1,15.6,0.68,24.8
-Haiti,HTI,62.5,23.3,0.22,7.8
-Honduras,HND,69.0,8.8,7.1,3.0
-Hong Kong,HKG,,,,
-Hungary,HUN,74.4,2.1,7.43,16.5
-Iceland,ISL,82.6,1.3,7.84,11.9
-India,IND,67.3,17.3,1.59,12.6
-Indonesia,IDN,68.3,10.5,1.03,1.2
-Iran,IRN,74.7,7.4,5.26,4.1
-Iraq,IRQ,71.5,12.9,5.02,3.0
-Ireland,IRL,81.6,2.5,4.75,8.5
-Israel,ISR,81.7,1.7,8.97,4.4
-Italy,ITA,82.2,1.6,8.82,7.0
-Jamaica,JAM,70.1,14.5,0.93,1.7
-Japan,JPN,84.5,0.8,8.16,17.4
-Jordan,JOR,75.6,7.6,7.94,0.6
-Kazakhstan,KAZ,70.3,4.3,2.13,14.6
-Kenya,KEN,66.8,21.5,0.25,4.6
-Kiribati,KIR,60.9,22.4,0.68,17.5
-Kuwait,KWT,79.0,4.8,8.1,2.3
-Kyrgyzstan,KGZ,72.2,10.8,1.56,6.8
-Lao People's Democratic Republic,LAO,68.2,20.0,0.76,4.6
-Latvia,LVA,73.2,1.5,7.08,15.2
-Lebanon,LBN,74.3,11.1,12.5,0.7
-Lesotho,LSO,51.5,28.7,0.37,28.7
-Liberia,LBR,63.5,29.6,0.02,6.0
-Libya,LBY,72.2,5.7,5.8,5.0
-Lithuania,LTU,74.1,1.9,16.84,22.1
-Luxembourg,LUX,82.8,1.6,9.74,8.2
-Macao,MAC,,,,
-Madagascar,MDG,62.9,23.8,0.08,6.1
-Malawi,MWI,62.5,18.8,0.05,7.6
-Malaysia,MYS,72.8,4.1,4.06,5.7
-Maldives,MDV,75.4,3.9,1.02,1.5
-Mali,MLI,61.7,32.4,0.01,4.2
-Malta,MLT,81.8,3.7,5.11,6.5
-Marshall Islands,MHL,,13.0,1.59,
-Mauritania,MRT,68.9,21.5,0.31,2.7
-Mauritius,MUS,73.4,9.0,3.24,10.5
-Mexico,MEX,70.8,7.6,1.18,7.0
-Micronesia,FSM,65.7,12.1,,19.8
-Monaco,MCO,,1.5,9.19,
-Mongolia,MNG,70.1,7.4,5.41,18.5
-Montenegro,MNE,74.7,1.0,0.58,11.3
-Morocco,MAR,72.6,10.2,1.4,2.9
-Mozambique,MOZ,57.7,25.4,0.11,10.6
-Myanmar,MMR,67.8,20.6,0.72,2.9
-Namibia,NAM,60.4,24.1,0.78,8.6
-Nauru,NRU,,4.8,3.45,
-Nepal,NPL,70.0,16.6,1.64,10.1
-Netherlands,NLD,81.1,2.6,5.67,11.5
-New Zealand,NZL,82.2,2.7,5.09,11.9
-Nicaragua,NIC,75.0,8.4,0.41,4.2
-Niger,NER,60.0,33.8,0.01,4.5
-Nigeria,NGA,63.4,33.7,0.23,5.0
-North Macedonia,MKD,73.0,1.4,9.24,5.8
-Norway,NOR,82.9,1.3,8.79,13.2
-Oman,OMN,72.5,4.7,3.59,0.9
-Pakistan,PAK,66.0,37.6,1.16,5.6
-Palau,PLW,,11.7,3.96,
-Panama,PAN,77.2,6.6,2.8,3.3
-Papua New Guinea,PNG,65.5,20.5,0.05,1.8
-Paraguay,PRY,70.3,9.1,13.41,6.4
-Peru,PER,71.7,7.8,2.15,1.5
-Philippines,PHL,66.4,14.0,2.51,3.5
-Poland,POL,75.4,2.4,10.73,13.7
-Portugal,PRT,81.2,1.6,12.05,11.5
-Puerto Rico,PRI,79.9,,,5.4
-Qatar,QAT,76.7,3.7,7.39,4.7
-Republic of Korea,KOR,83.8,1.2,5.41,27.5
-Republic of Moldova,MDA,69.6,10.8,4.98,14.1
-Romania,ROU,72.8,3.3,11.4,9.6
-Russian Federation,RUS,70.0,1.7,2.79,21.4
-Rwanda,RWA,67.5,18.1,0.2,8.7
-Saint Kitts and Nevis,KNA,,10.3,2.55,
-Saint Lucia,LCA,71.1,10.0,1.76,5.3
-Saint Vincent and the Grenadines,VCT,72.6,5.8,,0.4
-Samoa,WSM,70.3,6.2,0.9,12.0
-San Marino,SMR,,0.6,7.42,
-Sao Tome and Principe,STP,71.2,6.8,0.27,0.9
-Saudi Arabia,SAU,76.4,3.0,7.81,0.9
-Senegal,SEN,67.8,22.3,0.11,6.8
-Serbia,SRB,72.8,3.2,2.47,15.1
-Seychelles,SYC,74.0,8.5,3.51,4.3
-Sierra Leone,SLE,61.0,29.3,0.02,6.1
-Singapore,SGP,83.9,0.9,4.61,8.1
-Slovakia,SVK,74.5,3.0,5.43,9.9
-Slovenia,SVN,80.4,1.3,7.43,18.9
-Solomon Islands,SLB,64.8,8.3,0.51,19.6
-Somalia,SOM,54.0,34.9,,8.0
-South Africa,ZAF,61.5,11.7,0.19,22.3
-South Sudan,SSD,58.6,40.2,0.03,7.9
-Spain,ESP,82.7,1.7,6.03,8.7
-Sri Lanka,LKA,77.2,4.1,0.96,14.7
-Sudan,SDN,67.6,24.8,2.5,3.2
-Suriname,SUR,69.8,9.9,0.7,22.3
-Sweden,SWE,82.7,1.4,7.74,13.8
-Switzerland,CHE,83.3,2.8,4.06,14.0
-Syrian Arab Republic,SYR,72.4,10.0,10.22,0.6
-Tajikistan,TJK,71.8,12.6,1.5,2.4
-Thailand,THA,75.3,5.2,1.13,16.6
-Timor-Leste,TLS,68.0,22.2,0.02,3.6
-Togo,TGO,63.9,23.1,0.02,9.3
-Tonga,TON,72.7,4.3,1.42,4.7
-Trinidad and Tobago,TTO,71.7,12.9,2.99,13.3
-Tunisia,TUN,74.1,8.4,3.68,1.8
-Turkmenistan,TKM,69.1,22.8,1.24,6.8
-Tuvalu,TUV,,9.0,0.96,
-Türkiye,TUR,75.3,4.9,4.87,2.7
-Uganda,UGA,66.0,17.9,0.11,5.5
-Ukraine,UKR,70.9,4.7,,21.2
-United Arab Emirates,ARE,78.3,2.5,8.85,1.7
-United Kingdom,GBR,80.1,2.7,4.93,9.5
-United Republic of Tanzania,TZA,66.8,20.6,0.12,5.1
-United States of America,USA,76.4,3.4,6.0,15.6
-Uruguay,URY,75.0,4.1,2.49,24.8
-Uzbekistan,UZB,72.2,7.6,1.1,8.3
-Vanuatu,VUT,66.3,8.7,0.31,15.7
-Venezuela,VEN,71.2,15.0,1.35,8.6
-Viet Nam,VNM,73.8,10.3,,7.3
-Yemen,YEM,65.8,21.4,0.19,4.2
-Zambia,ZMB,61.0,22.0,0.14,7.1
-Zimbabwe,ZWE,58.5,22.4,0.3,17.3
+LOCATION,Pays_code_iso3,Espérance de vie totale,Taux mortalité brute,Médecins pour 10k habitants,Taux de suicides,Mortalité Maternelle à la naissance
+Afghanistan,AFG,59.1,34.3,0.06,3.6,521.0
+Albania,ALB,76.4,6.9,10.27,2.8,7.0
+Algeria,DZA,76.0,15.3,3.57,2.2,62.0
+Andorra,AND,,1.3,12.11,,11.0
+Angola,AGO,62.1,25.6,0.07,8.1,183.0
+Antigua and Barbuda,ATG,76.9,5.4,,1.5,35.0
+Argentina,ARG,74.6,5.0,10.86,7.9,33.0
+Armenia,ARM,73.0,5.3,3.59,2.5,19.0
+Australia,AUS,83.1,2.3,6.41,13.1,2.0
+Austria,AUT,81.0,2.0,6.19,14.5,6.0
+Azerbaijan,AZE,72.9,12.8,3.38,1.6,18.0
+Bahamas,BHS,70.4,9.2,2.54,3.3,76.0
+Bahrain,BHR,74.4,4.4,0.8,4.7,17.0
+Bangladesh,BGD,73.1,17.9,0.76,2.8,115.0
+Barbados,BRB,76.8,6.9,3.14,3.5,35.0
+Belarus,BLR,73.1,0.8,6.09,15.6,1.0
+Belgium,BEL,81.5,2.1,11.92,18.4,4.0
+Belize,BLZ,73.3,9.3,1.71,4.2,67.0
+Benin,BEN,64.0,28.0,0.05,7.1,518.0
+Bhutan,BTN,74.9,12.7,0.97,4.9,47.0
+Bolivia,BOL,65.4,12.2,2.29,4.2,146.0
+Bosnia and Herzegovina,BIH,74.8,4.5,2.58,9.0,6.0
+Botswana,BWA,61.2,20.9,0.36,8.4,155.0
+Brazil,BRA,72.4,7.6,7.45,7.6,67.0
+Brunei Darussalam,BRN,76.9,4.9,2.35,3.0,36.0
+Bulgaria,BGR,71.3,2.6,11.23,9.5,6.0
+Burkina Faso,BFA,62.3,24.5,0.06,8.5,242.0
+Burundi,BDI,64.0,19.6,0.01,7.7,392.0
+Cabo Verde,CPV,73.2,8.3,0.15,14.9,40.0
+Cambodia,KHM,68.9,11.8,0.31,4.5,137.0
+Cameroon,CMR,61.8,25.2,0.12,8.5,258.0
+Canada,CAN,81.6,3.4,6.53,9.4,12.0
+Central African Republic,CAF,52.3,30.7,0.01,9.2,692.0
+Chad,TCD,59.1,31.4,0.01,5.2,748.0
+Chile,CHL,79.0,4.6,16.77,7.7,10.0
+China,CHN,77.6,2.8,4.51,8.9,16.0
+Colombia,COL,74.5,6.5,8.68,5.0,59.0
+Comoros,COM,67.5,22.5,0.38,6.0,179.0
+Congo,COG,63.2,17.7,0.02,6.7,241.0
+Costa Rica,CRI,78.6,7.2,10.89,8.1,24.0
+Croatia,HRV,76.9,2.8,9.46,15.7,3.0
+Cuba,CUB,73.7,4.2,18.42,13.8,35.0
+Cyprus,CYP,81.9,1.9,8.19,3.0,14.0
+Czechia,CZE,77.1,1.3,7.39,13.3,3.0
+Côte d'Ivoire,CIV,63.5,28.2,0.14,7.4,359.0
+Democratic People's Republic of Korea,PRK,72.6,9.6,2.17,9.3,67.0
+Democratic Republic of the Congo,COD,61.6,25.3,0.04,8.8,427.0
+Denmark,DNK,81.2,1.8,7.18,10.5,4.0
+Djibouti,DJI,64.9,28.2,,8.0,162.0
+Dominica,DMA,,30.8,1.17,,36.0
+Dominican Republic,DOM,73.3,21.7,2.69,4.2,124.0
+Ecuador,ECU,74.0,7.1,3.0,7.6,55.0
+Egypt,EGY,69.1,9.3,1.87,0.6,17.0
+El Salvador,SLV,71.7,4.4,1.57,7.6,39.0
+Equatorial Guinea,GNQ,61.6,27.2,,7.0,174.0
+Eritrea,ERI,63.6,16.4,0.2,13.2,291.0
+Estonia,EST,77.1,1.0,10.18,14.9,5.0
+Eswatini,SWZ,54.6,24.5,0.28,27.2,118.0
+Ethiopia,ETH,67.8,27.4,0.28,6.1,195.0
+Fiji,FJI,65.5,14.9,1.17,8.3,30.0
+Finland,FIN,81.5,1.3,9.68,14.6,8.0
+France,FRA,81.9,2.7,6.94,16.6,7.0
+Gabon,GAB,65.1,16.8,0.18,7.3,233.0
+Gambia,GMB,64.2,23.7,0.03,4.8,354.0
+Georgia,GEO,71.2,5.3,7.74,5.1,20.0
+Germany,DEU,80.5,2.3,8.48,12.9,4.0
+Ghana,GHA,66.1,21.2,0.07,5.3,234.0
+Greece,GRC,79.6,2.3,13.35,4.7,5.0
+Grenada,GRD,72.8,12.4,1.9,1.3,48.0
+Guatemala,GTM,68.7,10.0,2.68,4.9,94.0
+Guinea,GIN,61.3,30.3,0.03,4.8,494.0
+Guinea-Bissau,GNB,58.6,32.7,0.1,7.7,505.0
+Guyana,GUY,66.1,15.6,0.68,24.8,75.0
+Haiti,HTI,62.5,23.3,0.22,7.8,328.0
+Honduras,HND,69.0,8.8,7.1,3.0,47.0
+Hong Kong,HKG,,,,,
+Hungary,HUN,74.4,2.1,7.43,16.5,12.0
+Iceland,ISL,82.6,1.3,7.84,11.9,3.0
+India,IND,67.3,17.3,1.59,12.6,80.0
+Indonesia,IDN,68.3,10.5,1.03,1.2,140.0
+Iran,IRN,74.7,7.4,5.26,4.1,16.0
+Iraq,IRQ,71.5,12.9,5.02,3.0,66.0
+Ireland,IRL,81.6,2.5,4.75,8.5,4.0
+Israel,ISR,81.7,1.7,8.97,4.4,2.0
+Italy,ITA,82.2,1.6,8.82,7.0,6.0
+Jamaica,JAM,70.1,14.5,0.93,1.7,130.0
+Japan,JPN,84.5,0.8,8.16,17.4,3.0
+Jordan,JOR,75.6,7.6,7.94,0.6,31.0
+Kazakhstan,KAZ,70.3,4.3,2.13,14.6,10.0
+Kenya,KEN,66.8,21.5,0.25,4.6,379.0
+Kiribati,KIR,60.9,22.4,0.68,17.5,80.0
+Kuwait,KWT,79.0,4.8,8.1,2.3,8.0
+Kyrgyzstan,KGZ,72.2,10.8,1.56,6.8,42.0
+Lao People's Democratic Republic,LAO,68.2,20.0,0.76,4.6,112.0
+Latvia,LVA,73.2,1.5,7.08,15.2,19.0
+Lebanon,LBN,74.3,11.1,12.5,0.7,15.0
+Lesotho,LSO,51.5,28.7,0.37,28.7,478.0
+Liberia,LBR,63.5,29.6,0.02,6.0,628.0
+Libya,LBY,72.2,5.7,5.8,5.0,59.0
+Lithuania,LTU,74.1,1.9,16.84,22.1,8.0
+Luxembourg,LUX,82.8,1.6,9.74,8.2,12.0
+Macao,MAC,,,,,
+Madagascar,MDG,62.9,23.8,0.08,6.1,445.0
+Malawi,MWI,62.5,18.8,0.05,7.6,225.0
+Malaysia,MYS,72.8,4.1,4.06,5.7,26.0
+Maldives,MDV,75.4,3.9,1.02,1.5,32.0
+Mali,MLI,61.7,32.4,0.01,4.2,367.0
+Malta,MLT,81.8,3.7,5.11,6.5,8.0
+Marshall Islands,MHL,,13.0,1.59,,155.0
+Mauritania,MRT,68.9,21.5,0.31,2.7,381.0
+Mauritius,MUS,73.4,9.0,3.24,10.5,66.0
+Mexico,MEX,70.8,7.6,1.18,7.0,42.0
+Micronesia,FSM,65.7,12.1,,19.8,129.0
+Monaco,MCO,,1.5,9.19,,5.0
+Mongolia,MNG,70.1,7.4,5.41,18.5,41.0
+Montenegro,MNE,74.7,1.0,0.58,11.3,6.0
+Morocco,MAR,72.6,10.2,1.4,2.9,70.0
+Mozambique,MOZ,57.7,25.4,0.11,10.6,82.0
+Myanmar,MMR,67.8,20.6,0.72,2.9,185.0
+Namibia,NAM,60.4,24.1,0.78,8.6,139.0
+Nauru,NRU,,4.8,3.45,,273.0
+Nepal,NPL,70.0,16.6,1.64,10.1,142.0
+Netherlands,NLD,81.1,2.6,5.67,11.5,4.0
+New Zealand,NZL,82.2,2.7,5.09,11.9,7.0
+Nicaragua,NIC,75.0,8.4,0.41,4.2,60.0
+Niger,NER,60.0,33.8,0.01,4.5,350.0
+Nigeria,NGA,63.4,33.7,0.23,5.0,993.0
+North Macedonia,MKD,73.0,1.4,9.24,5.8,3.0
+Norway,NOR,82.9,1.3,8.79,13.2,1.0
+Oman,OMN,72.5,4.7,3.59,0.9,13.0
+Pakistan,PAK,66.0,37.6,1.16,5.6,155.0
+Palau,PLW,,11.7,3.96,,89.0
+Panama,PAN,77.2,6.6,2.8,3.3,37.0
+Papua New Guinea,PNG,65.5,20.5,0.05,1.8,189.0
+Paraguay,PRY,70.3,9.1,13.41,6.4,58.0
+Peru,PER,71.7,7.8,2.15,1.5,51.0
+Philippines,PHL,66.4,14.0,2.51,3.5,84.0
+Poland,POL,75.4,2.4,10.73,13.7,2.0
+Portugal,PRT,81.2,1.6,12.05,11.5,15.0
+Puerto Rico,PRI,79.9,,,5.4,11.0
+Qatar,QAT,76.7,3.7,7.39,4.7,4.0
+Republic of Korea,KOR,83.8,1.2,5.41,27.5,4.0
+Republic of Moldova,MDA,69.6,10.8,4.98,14.1,19.0
+Romania,ROU,72.8,3.3,11.4,9.6,12.0
+Russian Federation,RUS,70.0,1.7,2.79,21.4,9.0
+Rwanda,RWA,67.5,18.1,0.2,8.7,229.0
+Saint Kitts and Nevis,KNA,,10.3,2.55,,74.0
+Saint Lucia,LCA,71.1,10.0,1.76,5.3,44.0
+Saint Vincent and the Grenadines,VCT,72.6,5.8,,0.4,56.0
+Samoa,WSM,70.3,6.2,0.9,12.0,101.0
+San Marino,SMR,,0.6,7.42,,8.0
+Sao Tome and Principe,STP,71.2,6.8,0.27,0.9,75.0
+Saudi Arabia,SAU,76.4,3.0,7.81,0.9,7.0
+Senegal,SEN,67.8,22.3,0.11,6.8,237.0
+Serbia,SRB,72.8,3.2,2.47,15.1,11.0
+Seychelles,SYC,74.0,8.5,3.51,4.3,42.0
+Sierra Leone,SLE,61.0,29.3,0.02,6.1,354.0
+Singapore,SGP,83.9,0.9,4.61,8.1,6.0
+Slovakia,SVK,74.5,3.0,5.43,9.9,4.0
+Slovenia,SVN,80.4,1.3,7.43,18.9,3.0
+Solomon Islands,SLB,64.8,8.3,0.51,19.6,123.0
+Somalia,SOM,54.0,34.9,,8.0,563.0
+South Africa,ZAF,61.5,11.7,0.19,22.3,118.0
+South Sudan,SSD,58.6,40.2,0.03,7.9,692.0
+Spain,ESP,82.7,1.7,6.03,8.7,3.0
+Sri Lanka,LKA,77.2,4.1,0.96,14.7,18.0
+Sudan,SDN,67.6,24.8,2.5,3.2,256.0
+Suriname,SUR,69.8,9.9,0.7,22.3,84.0
+Sweden,SWE,82.7,1.4,7.74,13.8,4.0
+Switzerland,CHE,83.3,2.8,4.06,14.0,5.0
+Syrian Arab Republic,SYR,72.4,10.0,10.22,0.6,20.0
+Tajikistan,TJK,71.8,12.6,1.5,2.4,14.0
+Thailand,THA,75.3,5.2,1.13,16.6,34.0
+Timor-Leste,TLS,68.0,22.2,0.02,3.6,192.0
+Togo,TGO,63.9,23.1,0.02,9.3,349.0
+Tonga,TON,72.7,4.3,1.42,4.7,67.0
+Trinidad and Tobago,TTO,71.7,12.9,2.99,13.3,54.0
+Tunisia,TUN,74.1,8.4,3.68,1.8,36.0
+Turkmenistan,TKM,69.1,22.8,1.24,6.8,5.0
+Tuvalu,TUV,,9.0,0.96,,170.0
+Türkiye,TUR,75.3,4.9,4.87,2.7,15.0
+Uganda,UGA,66.0,17.9,0.11,5.5,170.0
+Ukraine,UKR,70.9,4.7,,21.2,15.0
+United Arab Emirates,ARE,78.3,2.5,8.85,1.7,3.0
+United Kingdom,GBR,80.1,2.7,4.93,9.5,8.0
+United Republic of Tanzania,TZA,66.8,20.6,0.12,5.1,276.0
+United States of America,USA,76.4,3.4,6.0,15.6,17.0
+Uruguay,URY,75.0,4.1,2.49,24.8,15.0
+Uzbekistan,UZB,72.2,7.6,1.1,8.3,26.0
+Vanuatu,VUT,66.3,8.7,0.31,15.7,100.0
+Venezuela,VEN,71.2,15.0,1.35,8.6,227.0
+Viet Nam,VNM,73.8,10.3,,7.3,48.0
+Yemen,YEM,65.8,21.4,0.19,4.2,118.0
+Zambia,ZMB,61.0,22.0,0.14,7.1,85.0
+Zimbabwe,ZWE,58.5,22.4,0.3,17.3,358.0
