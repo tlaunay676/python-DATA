@@ -52,7 +52,7 @@ def get_data_health_with_iso():
     cols = df_sdg3.columns.tolist()
     cols.insert(1, cols.pop(cols.index("Pays_code_iso3")))
     df_sdg3 = df_sdg3[cols]
-    df_sdg3 = df_sdg3[['LOCATION','Pays_code_iso3',"HWF_0010","SDGSUICIDE","WHOSIS_000001_BTSX","WHOSIS_000003"]]
+    df_sdg3 = df_sdg3[['LOCATION','Pays_code_iso3',"HWF_0001","SDGSUICIDE","WHOSIS_000001_BTSX","WHOSIS_000003"]]
 
     # SDG_GPW
     headers_sdg_gpw = get_headers("SDG_GPW")
