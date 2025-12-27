@@ -41,7 +41,7 @@ def afficher_graphiques(liste_indicateurs, disposition="1"):
     
     for idx, (nom_col, titre, type_graph) in enumerate(liste_indicateurs):
         try:
-            df_reg = pd.read_csv("/home/onyxia/work/python-DATA/données_sante_mentale/Table_complète.csv")
+            df_reg = pd.read_csv('Table_complète.csv')
             df_grp = pd.read_csv('Table_groupes_pays_richesse.csv')
             
             df_reg = df_reg.dropna(subset=['2021', nom_col])

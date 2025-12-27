@@ -88,7 +88,7 @@ def graphique_coefficients(model):
 
 if __name__ == "__main__":
     try:
-        chemin = "/home/onyxia/work/python-DATA/données_sante_mentale/Table_complète.csv"
+        chemin = "Table_complète.csv"
         df = pd.read_csv(chemin)
         
         model, df_clean = analyse_sante_vers_pib(df)

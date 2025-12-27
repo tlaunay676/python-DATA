@@ -12,10 +12,7 @@ def plot_missing_gdp(data, col = "GDP_per_capita"):
     - col (str): The column for which missing values are plotted.
     """
     missing_values_per_year = data.groupby('Year')[col].apply(lambda x: x.isnull().sum())
-    missing_values = data[col].isnull().sum()
-    cumulative_missing_values = missing_values_per_year.cumsum()
-    cumulative_missing_percentage = (cumulative_missing_values / missing_values) * 100
-    cumulative_missing_percentage_int = cumulative_missing_percentage.round().astype(int)
+    missing_values_per_year_percentage = (missing_values_per_year/data.shape[0])*100*10 # Because hear we use the long table so shape[0] give us the number of country x the number of years (=10)
     fig, ax1 = plt.subplots(figsize=(12, 6))
     bars = ax1.bar(missing_values_per_year.index, missing_values_per_year.values, color='skyblue', label='Yearly Missing Values')
     for bar in bars:
@@ -23,12 +20,12 @@ def plot_missing_gdp(data, col = "GDP_per_capita"):
         ax1.text(bar.get_x() + bar.get_width()/2, yval, int(yval), va='bottom', ha='center')
     ax1.set_xlabel('Year')
     ax1.set_ylabel('Number of Missing Values per Year', color='skyblue')
-    ax1.set_title('Yearly and Cumulative Missing in GDP')
+    ax1.set_title('Yearly Missing in GDP')
     ax1.set_xticks(missing_values_per_year.index)
     ax1.set_xticklabels(missing_values_per_year.index, rotation=90)
     ax2 = ax1.twinx()
-    ax2.plot(cumulative_missing_values.index, cumulative_missing_percentage_int.values, color='orange', marker='o', label='Cumulative Missing Values (%)')
-    ax2.set_ylabel('Cumulative Missing Values since 2015 in %', color='orange')
+    ax2.plot(missing_values_per_year_percentage.index, missing_values_per_year_percentage.values, color='orange', marker='o', label='Missing Values (%)')
+    ax2.set_ylabel('Missing Values since 2015 in %', color='orange')
     plt.show()
 
 
@@ -45,7 +42,7 @@ def world_map_gdp(dataframe, y_col = 'GDP_per_capita', data_name = 'PIB par habi
     - Assumes the dataframe has columns 'Country Code', 'Year', and the specified y_col.
     """
     min_value = dataframe[y_col].min()
-    max_value = dataframe[y_col].max()
+    max_value = 125000 # We don't take the max because he is too high and not visible on the map
     # Création d'une carte du monde avec Plotly
     fig = px.choropleth(dataframe, 
                         locations='Country Code',
@@ -74,7 +71,7 @@ def world_map_gdp(dataframe, y_col = 'GDP_per_capita', data_name = 'PIB par habi
             {"args": [f"slider{i}.value", {"duration": 400, "frame": {"duration": 400, "redraw": True}, "mode": "immediate"}],
              "label": str(i),
              "method": "animate",
-            } for i in range(1990, 2022)
+            } for i in range(2015, 2024)
         ],
     )
     fig.update_layout(
