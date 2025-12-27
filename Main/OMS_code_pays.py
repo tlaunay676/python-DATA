@@ -61,6 +61,7 @@ def get_data_health_with_iso():
     cols = df_sdg_gpw.columns.tolist()
     cols.insert(1, cols.pop(cols.index("Pays_code_iso3")))
     df_sdg_gpw = df_sdg_gpw[cols]
+    df_sdg_gpw = df_sdg_gpw[['LOCATION','Pays_code_iso3','NUTOVERWEIGHTPREV','GHED_GGHE_DGGE_SHA2011','NUTSTUNTINGPREV']]
 
     return {"SDG3": df_sdg3, "SDG_GPW": df_sdg_gpw}
 

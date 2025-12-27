@@ -78,7 +78,7 @@ def afficher_graphiques(liste_indicateurs, disposition="1"):
             
         except Exception as e:
             print(f"Erreur pour {titre}: {e}")
-    
+
     plt.tight_layout()
     plt.show()
     
