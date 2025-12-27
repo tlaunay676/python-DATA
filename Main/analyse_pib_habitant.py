@@ -101,3 +101,23 @@ def world_map_gdp(dataframe, y_col = 'GDP_per_capita', data_name = 'PIB par habi
     height=height
 )
     fig.show()
+
+def decile_gdp(data_frame, k = int, y_col = 'GDP_per_capita'):
+    deciles = pd.qcut(data_frame['GDP_per_capita'], q=k, labels=False)
+    plot_data = pd.DataFrame({'Year': data_frame['Year'],'decile': deciles,'GDP_per_capita': data_frame['GDP_per_capita']})
+    grouped_data = plot_data.groupby(['Year', 'decile'])['GDP_per_capita'].mean().unstack()
+    overall_mean = plot_data.groupby('Year')['GDP_per_capita'].mean()
+    plt.figure(figsize=(11, 6))
+    for decile in range(k):
+        plt.plot(grouped_data.index, grouped_data[decile], label=f'Decile {decile + 1}')
+        plt.text(grouped_data.index[-1] + str(2), grouped_data[decile].iloc[-1],
+                f'D{decile + 1} mean: {grouped_data[decile].mean():.2f}',
+                va='center', ha='left', color=plt.gca().get_lines()[-1].get_color())
+    plt.plot(overall_mean.index, overall_mean, label='Overall Mean', linestyle='--', color='black')
+    plt.text(overall_mean.index[-1] + str(2), overall_mean.iloc[-1] + 13,
+         f'Overall mean: {overall_mean.mean():.2f}',
+         va='center', ha='left', color='black')
+    plt.ylabel('Average GDP per capita')
+    plt.title('Average GDP per capita per year')
+    plt.show()
+    del plot_data
