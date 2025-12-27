@@ -111,7 +111,7 @@ def decile_gdp(data_frame, k = int, y_col = 'GDP_per_capita'):
     for decile in range(k):
         plt.plot(grouped_data.index, grouped_data[decile], label=f'Decile {decile + 1}')
         plt.text(grouped_data.index[-1] + str(2), grouped_data[decile].iloc[-1],
-                f'D{decile + 1} mean: {grouped_data[decile].mean():.2f}',
+                f'Q{decile + 1} mean: {grouped_data[decile].mean():.2f}',
                 va='center', ha='left', color=plt.gca().get_lines()[-1].get_color())
     plt.plot(overall_mean.index, overall_mean, label='Overall Mean', linestyle='--', color='black')
     plt.text(overall_mean.index[-1] + str(2), overall_mean.iloc[-1] + 13,
