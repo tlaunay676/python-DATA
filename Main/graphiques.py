@@ -42,7 +42,7 @@ def afficher_graphiques(liste_indicateurs, disposition="1"):
     for idx, (nom_col, titre, type_graph) in enumerate(liste_indicateurs):
         try:
             df_reg = pd.read_csv('Table_fusion.csv')
-            df_grp = pd.read_csv('Table_groupes_pays_richesse.csv')
+            df_grp = pd.read_csv('Table_fusion_income_groupe.csv')
             
             df_reg = df_reg.dropna(subset=['2021', nom_col])
             df_reg = df_reg[df_reg['2021'] > 0]
