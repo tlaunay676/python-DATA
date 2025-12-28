@@ -1,5 +1,46 @@
 import plotly.express as px
 
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def description_indicateurs(df, variables):
+    """
+    Décrit des indicateurs de santé à l'aide de statistiques simples
+    et de boxplots.
+
+    Paramètres
+    ----------
+    df : pandas.DataFrame
+        DataFrame contenant les données
+    variables : list
+        Liste des colonnes numériques à analyser
+    """
+
+    # Vérification des variables
+    variables = [v for v in variables if v in df.columns]
+    if not variables:
+        raise ValueError("Aucune variable valide fournie.")
+
+    # Statistiques descriptives
+    stats = pd.DataFrame({
+        "Moyenne": df[variables].mean(),
+        "Médiane": df[variables].median(),
+        "Minimum": df[variables].min(),
+        "Maximum": df[variables].max(),
+        "Écart-type": df[variables].std()
+    })
+
+    print("Statistiques descriptives :\n")
+    print(stats.round(2))
+
+    # Boxplot par variable
+    for var in variables:
+        plt.figure(figsize=(5, 4))
+        plt.boxplot(df[var].dropna(), vert=True)
+        plt.title(f"Boxplot de {var}")
+        plt.ylabel(var)
+        plt.grid(axis="y", linestyle="--", alpha=0.6)
+        plt.show()
 
 
 def world_map(dataframe,y_col,country_code_col="Pays_code_iso3",country_name_col="LOCATION",data_name=None,width=900,height=500):
