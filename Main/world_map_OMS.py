@@ -1,5 +1,7 @@
 import plotly.express as px
 
+
+
 def world_map(dataframe,y_col,country_code_col="Pays_code_iso3",country_name_col="LOCATION",data_name=None,width=900,height=500):
     """
     Creates a static world map showing the distribution of a specific column across countries.
