@@ -1,4 +1,4 @@
-measure,location,sex,age,cause,metric,year,val,upper,lower
+measure,LOCATION,sex,age,cause,metric,year,val,upper,lower
 DALYs (Disability-Adjusted Life Years),Maldives,Both,Age-standardized,Depressive disorders,Rate,2021,451.2734239715069,646.6211369168794,303.62954216132647
 DALYs (Disability-Adjusted Life Years),Maldives,Both,Age-standardized,Bipolar disorder,Rate,2021,68.4941292258262,100.83879340821522,40.900968246565434
 DALYs (Disability-Adjusted Life Years),Maldives,Both,Age-standardized,Anxiety disorders,Rate,2021,267.12985029944514,386.4025528642656,178.5137383515796
