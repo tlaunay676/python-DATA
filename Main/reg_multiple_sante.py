@@ -84,19 +84,3 @@ def graphique_coefficients(model):
     
     plt.tight_layout()
     plt.show()
-
-
-if __name__ == "__main__":
-    try:
-        chemin = "Table_complète.csv"
-        df = pd.read_csv(chemin)
-        
-        model, df_clean = analyse_sante_vers_pib(df)
-        
-        graphique_valeurs_predites_vs_reelles(model, df_clean)
-        graphique_coefficients(model)
-        
-    except FileNotFoundError:
-        print("Erreur : Le fichier CSV est introuvable.")
-    except KeyError as e:
-        print(f"Erreur : La colonne {e} n'existe pas dans le CSV.")
