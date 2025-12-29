@@ -1,6 +1,16 @@
 import requests
 import pandas as pd
 
+def check_api_availability(indicator="NY.GDP.PCAP.CD"):
+    url = f"https://api.worldbank.org/v2/country/all/indicator/{indicator}"
+    try:
+        r = requests.get(url, timeout = 60)
+        r.raise_for_status()
+        return True
+    except requests.exceptions.RequestException as api_exception:
+        print("L'API n'est pas disponible, la sauvegarde locale a été utilisées")
+        return False
+
 def get_gdp_per_capita_wide(start_year=2015, end_year=2024, indicator="NY.GDP.PCAP.CD"):
     """
     Récupère le PIB par habitant (Banque mondiale)
@@ -78,7 +88,3 @@ def get_gdp_per_capita(start_year=2015, end_year=2024, indicator="NY.GDP.PCAP.CD
     df.columns = ["Country Name", "Country Code", "Year", "GDP_per_capita"]
 
     return df
-
-df = get_gdp_per_capita_wide()
-
-df.to_csv("/home/onyxia/work/python-DATA/Données_PIB/Données_PIB_habitant_2015_2024.csv", index = False)
