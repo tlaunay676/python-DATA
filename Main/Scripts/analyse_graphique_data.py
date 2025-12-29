@@ -116,8 +116,7 @@ def afficher_graphiques(liste_indicateurs, df,disposition="1"):
     print("\n" + "="*70)
     print("RESUME DES REGRESSIONS")
     print("="*70)
-    for titre, res in resultats_list:
-        print(f"\n{titre}")
+    for var, res in resultats_list:
+        print(f"\n{var}")
         print("-" * 70)
         print(res.summary())
-        print()
