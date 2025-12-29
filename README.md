@@ -1,40 +1,27 @@
-# Santé & Croissance Économique
-
-## Introduction 
-
-Ce projet vise à **étudier les liens entre différents indicateurs de santé et la croissance économique**, mesurée via le PIB.  
-Pour cela, nous avons récupéré :
-- des **données de santé SDG et SDG3** issues de l’**Organisation Mondiale de la Santé (OMS)** ;
-- des **données de PIB par habitant** provenant de l’**OCDE**.
-
-Le premier objectif est de créer un jeu de données propre, harmonisé et exploitable pour des analyses statistiques ou des modèles prédictifs.
-
----
-## Rendre les données exploitables
-
-1. **Récupérer automatiquement** des indicateurs clés de santé depuis le portail de l’OMS (scraping).
-2. **Nettoyer et harmoniser** les données de PIB téléchargées depuis l’OCDE (à terme essayer d'utiliser l'API de l'OCDE) et les données de l'OMS.
-3. **Fusionner les deux sources** dans un jeu de données prêt pour l'analyse.
-
+# Croissance économique et Santé
 ---
 
-## 1. Scraping des données OMS
-
-- Requête HTTP vers les pages ou endpoints contenant les tables OMS.
-- Extraction automatique des tableaux via **BeautifulSoup**.
-- Standardisation des colonnes (noms, formats, types numériques). 
-- Nettoyage :
-  - gestion des valeurs manquantes,
-  - conversion en format numérique,
-  - harmonisation des codes pays.
-
+##### Projet réalisé par Thibaut LAUNAY, Jeanne LEMASSON et Christophe REY
 ---
 
-## 2.Données OCDE (PIB + Taux de pauvreté)
+## I. Définitions
 
-- Téléchargement des données en CSV (Utiliser l'API serait à terme le plus intéressant)
-- Standardisation des colonnes (noms, formats, types numériques). 
-- Nettoyage :
-  - gestion des valeurs manquantes,
-  - conversion en format numérique,
-  - harmonisation des codes pays.
+Dans ce projet, la **croissance économique** est appréhendée à travers le **Produit Intérieur Brut (PIB) par habitant**.  
+Le PIB par habitant correspond au **PIB total d’un pays rapporté à sa population**. Il constitue un indicateur synthétique couramment utilisé pour mesurer le **niveau moyen de richesse économique** et le **niveau de vie potentiel** d’un pays.
+
+Cet indicateur est largement mobilisé dans la littérature économique et par les institutions internationales, notamment la **Banque mondiale**, comme proxy du développement économique, bien qu’il ne rende pas compte des inégalités internes ni de l’ensemble des dimensions du bien-être.
+
+## II. Objectifs
+
+L’objectif principal de ce projet est d’**étudier les relations entre différents indicateurs de santé et la croissance économique**, mesurée par le **PIB par habitant**.  
+L’analyse vise à identifier d’éventuelles corrélations, disparités ou tendances entre le niveau de richesse économique des pays et leurs performances en matière de santé.
+
+## III. Sources des données
+
+Les données utilisées proviennent de sources suivantes :
+
+ - des **indicateurs de santé issus des bases SDG et SDG3**, fournis par l’**Organisation Mondiale de la Santé (OMS)**, relatifs notamment à la mortalité, à la nutrition et à l’accès aux soins ;
+
+ - des **données de santé mentale issues de l’Institute for Health Metrics and Evaluation (IHME)**. L’IHME est un centre de recherche international spécialisé dans la mesure comparative de la charge mondiale des maladies. Les indicateurs mobilisés sont exprimés en **DALYs (Disability-Adjusted Life Years)**, qui mesurent la charge totale de morbidité en combinant les années de vie perdues par mortalité prématurée et les années vécues avec incapacité ;
+
+ - des **données de PIB par habitant** provenant de la **World Bank**, utilisées comme mesure standardisée de la richesse économique des pays.
