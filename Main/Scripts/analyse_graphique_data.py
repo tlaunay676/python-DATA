@@ -12,7 +12,7 @@ def afficher_graphiques(liste_indicateurs, df,disposition="1"):
     Paramètres
     ----------
     liste_indicateurs : list of tuples
-        Liste contenant des tuples de la forme (nom_colonne, titre, type_graphique, année_des_données) où :
+        Liste contenant des tuples de la forme (nom_colonne, var, titre, type_graphique, année_des_données) où :
         - nom_colonne : str, nom de la colonne à analyser
         - var : str, description de la variable
         - titre : str, titre du graphique
