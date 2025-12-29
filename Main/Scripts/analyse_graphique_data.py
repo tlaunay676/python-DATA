@@ -81,7 +81,7 @@ def afficher_graphiques(liste_indicateurs, df,disposition="1"):
             if type_graph == "regression":
                 ax.scatter(df['log_PIB'], df[nom_col], alpha=0.5, color='#2ecc71')
                 ax.plot(df['log_PIB'], resultats.predict(), color='red', linewidth=2)
-                ax.set_xlabel("Richesse (Log PIB)", fontsize=9)
+                ax.set_xlabel(f"Richesse (Log PIB par habitant de {pib})", fontsize=9)
                 ax.set_ylabel(titre, fontsize=9)
                 ax.grid(True, linestyle='--', alpha=0.6)
 
