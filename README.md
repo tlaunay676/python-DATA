@@ -6,14 +6,14 @@
 
 ## I. Définitions
 
-Dans ce projet, la **croissance économique** est appréhendée à travers le **Produit Intérieur Brut (PIB) par habitant**.  
+Dans ce projet, le**développement économique** est appréhendée à travers le **Produit Intérieur Brut (PIB) par habitant**.  
 Le PIB par habitant correspond au **PIB total d’un pays rapporté à sa population**. Il constitue un indicateur synthétique couramment utilisé pour mesurer le **niveau moyen de richesse économique** et le **niveau de vie potentiel** d’un pays.
 
 Cet indicateur est largement mobilisé dans la littérature économique et par les institutions internationales, notamment la **Banque mondiale**, comme proxy du développement économique, bien qu’il ne rende pas compte des inégalités internes ni de l’ensemble des dimensions du bien-être.
 
 ## II. Objectifs
 
-L’objectif principal de ce projet est d’**étudier les relations entre différents indicateurs de santé et la croissance économique**, mesurée par le **PIB par habitant**.  
+L’objectif principal de ce projet est d’**étudier les relations entre différents indicateurs de santé et le développement économique**, mesurée par le **PIB par habitant**.  
 L’analyse vise à identifier d’éventuelles corrélations, disparités ou tendances entre le niveau de richesse économique des pays et leurs performances en matière de santé.
 
 ## III. Sources des données
