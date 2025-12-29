@@ -48,3 +48,11 @@ Le dossier Scripts contient une multitude de fonctions, afin de rendre notre mai
 
 Enfin, une cellule de préparation des données  installe la bibliothèque **pycountry**, puis importe l’ensemble des packages Python nécessaires à l’analyse, la manipulation de données, la visualisation graphique, le clustering et les appels à des API externes.
 Elle charge également les fonctions et modules développés dans le projet permettant d’exécuter les traitements, analyses et visualisations dans les cellules suivantes du main.
+
+## V. Execution
+
+Les cartes ne s’affichent pas directement sur GitHub car celui-ci ne prend pas en charge le rendu des visualisations interactives.
+
+Pour visualiser correctement les cartes, il est nécessaire de lancer le code via un **interpréteur Python**.
+
+Nous avons choisi cette approche plutôt que de fournir des sauvegardes locales statiques en HTML pour mettre en avant le fait que **les fonctions de génération des cartes sont pleinement opérationnelles et dynamiques**, permettant ainsi de modifier ou d’actualiser facilement les visualisations avec de nouvelles données.
