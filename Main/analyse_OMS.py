@@ -2,11 +2,12 @@ import plotly.express as px
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
-def description_indicateurs(df, variables):
+def description_indicateurs(df, variables, disposition="1"):
     """
     Décrit des indicateurs de santé à l'aide de statistiques simples
-    et de boxplots.
+    et de boxplots avec disposition configurable.
 
     Paramètres
     ----------
@@ -14,6 +15,8 @@ def description_indicateurs(df, variables):
         DataFrame contenant les données
     variables : list
         Liste des colonnes numériques à analyser
+    disposition : str
+        "1" ou "2" pour la disposition des boxplots
     """
 
     # Vérification des variables
@@ -33,13 +36,34 @@ def description_indicateurs(df, variables):
     print("Statistiques descriptives :\n")
     print(stats.round(2))
 
-    # Boxplot par variable
-    for var in variables:
-        plt.figure(figsize=(5, 4))
-        plt.boxplot(df[var].dropna(), vert=True)
-        plt.title(f"Boxplot de {var}")
-        plt.ylabel(var)
-        plt.grid(axis="y", linestyle="--", alpha=0.6)
+    # Définition des layouts
+    if disposition == "1":
+        ncols, nrows, figsize = 1, 1, (5, 4)
+    elif disposition == "2":
+        ncols, nrows, figsize = 2, 1, (10, 4)
+    elif disposition == "3":
+        ncols, nrows, figsize = 3, 1, (15, 4)
+    else:
+        raise ValueError("Disposition invalide : choisir '1', '2' ou '4'")
+
+    # Boxplots avec disposition choisie
+    for i in range(0, len(variables), ncols * nrows):
+        subset = variables[i:i + ncols * nrows]
+
+        fig, axes = plt.subplots(nrows, ncols, figsize=figsize)
+        axes = np.array(axes).reshape(-1)
+
+        for ax, var in zip(axes, subset):
+            ax.boxplot(df[var].dropna(), vert=True)
+            ax.set_title(f"{var}", fontsize=10)
+            ax.set_ylabel(var)
+            ax.grid(axis="y", linestyle="--", alpha=0.6)
+
+        # Supprimer les axes vides
+        for ax in axes[len(subset):]:
+            ax.axis("off")
+
+        plt.tight_layout()
         plt.show()
 
 
