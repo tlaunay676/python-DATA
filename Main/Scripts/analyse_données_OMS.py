@@ -120,3 +120,34 @@ def world_map(dataframe, y_col, country_code_col="Pays_code_iso3", country_name_
     fig.update_coloraxes(colorbar_title_text="")
 
     fig.show()
+
+def desc_missing_health(df, var, country_col):
+    """
+    Description textuelle des valeurs manquantes d'une colonne de données de santé dans un DataFrame.
+
+    Paramètres
+    ----------
+    df : pandas.DataFrame
+        DataFrame contenant les données.
+    var : str
+        Nom de la colonne correspondant à la variable de santé.
+    country_col : str
+        Colonne contenant les noms ou codes des pays.
+
+    Sortie
+    ------
+    Affiche le nombre de pays, le nombre de valeurs manquantes et le pourcentage de valeurs manquantes.
+    """
+
+    # Comptage du nombre de pays uniques
+    n_countries = df[country_col].nunique()
+
+    # Comptage du nombre de valeurs manquantes
+    n_missing = df[var].isna().sum()
+
+    # Calcul du pourcentage de valeurs manquantes par rapport au nombre de pays
+    pct_missing = (n_missing / n_countries) * 100
+
+    # Affichage formaté des informations
+    print(f"The dataframe includes {n_countries} countries and {n_missing} missing values.\n"
+          f"The percentage of missing values for {var} in the dataset is {pct_missing:.2f}%.")
