@@ -98,7 +98,7 @@ def afficher_graphiques(liste_indicateurs, df,disposition="1"):
                 # Création du graphique en barres
                 bars = ax.bar(resultat_moyen.index, resultat_moyen.values, color='#87CEEB',
                              edgecolor='#5A9AB4', linewidth=1.5, alpha=0.85)
-                ax.set_ylabel(titre, fontsize=9)
+                ax.set_ylabel(var, fontsize=9)
                 plt.setp(ax.get_xticklabels(), rotation=45, ha='right', fontsize=8)
                 ax.grid(axis='y', linestyle='--', alpha=0.7)
 
