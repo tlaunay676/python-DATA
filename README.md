@@ -1,4 +1,4 @@
-# Croissance économique et Santé
+# Développement économique et Santé
 ---
 
 ##### Projet réalisé par Thibaut LAUNAY, Jeanne LEMASSON et Christophe REY
