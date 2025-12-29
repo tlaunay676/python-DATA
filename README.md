@@ -24,7 +24,7 @@ Les données utilisées proviennent de sources suivantes :
 
  - des **données de santé mentale issues de l’Institute for Health Metrics and Evaluation (IHME)**. L’IHME est un centre de recherche international spécialisé dans la mesure comparative de la charge mondiale des maladies. Les indicateurs mobilisés sont exprimés en **DALYs (Disability-Adjusted Life Years)**, qui mesurent la charge totale de morbidité en combinant les années de vie perdues par mortalité prématurée et les années vécues avec incapacité ;
 
- - des **données de PIB par habitant** provenant de la **World Bank**, utilisées comme mesure standardisée de la richesse économique des pays.
+ - des **données de PIB par habitant** provenant de la **WorldBank**, utilisées comme mesure standardisée de la richesse économique des pays.
 
 ## IV. Présentation du dépôt 
 
