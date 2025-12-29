@@ -25,3 +25,26 @@ Les données utilisées proviennent de sources suivantes :
  - des **données de santé mentale issues de l’Institute for Health Metrics and Evaluation (IHME)**. L’IHME est un centre de recherche international spécialisé dans la mesure comparative de la charge mondiale des maladies. Les indicateurs mobilisés sont exprimés en **DALYs (Disability-Adjusted Life Years)**, qui mesurent la charge totale de morbidité en combinant les années de vie perdues par mortalité prématurée et les années vécues avec incapacité ;
 
  - des **données de PIB par habitant** provenant de la **World Bank**, utilisées comme mesure standardisée de la richesse économique des pays.
+
+## IV. Présentation du dépôt 
+
+Notre production est essentiellement localisée dans un fichier **main.ipynb**.
+
+Ce fichier utilise des sauvegardes locales afin de pouvoir présenter les résultats même en cas  d'inaccessibilité temporaire des sources. En effet, une des API  a été indisponibles pendant quelques jours durant le projet, ce qui nous a contraint à trouver une solution pour que cela ne soit pas le cas durant la correction.
+
+Cependant, le code a été pensé pour que dans le cas où les sources sont disponibles, ce soit les API qui soient utilisés.
+
+Ce fichier **main.ipynb** tient lieu de **rapport final**.
+
+Les sauvegardes locales des données et les données apportées sous format csv sont stockées dans les dossiers : 
+ - **Données Income group**
+ - **Données_fusionnées**
+ - **Données_IHME**
+ - **Données OMS**
+ - **Données_PIB**
+
+
+Le dossier Scripts contient une multitude de fonctions, afin de rendre notre main plus lisible.
+
+Enfin, une cellule de préparation des données  installe la bibliothèque **pycountry**, puis importe l’ensemble des packages Python nécessaires à l’analyse, la manipulation de données, la visualisation graphique, le clustering et les appels à des API externes.
+Elle charge également les fonctions et modules développés dans le projet permettant d’exécuter les traitements, analyses et visualisations dans les cellules suivantes du main.
