@@ -104,6 +104,9 @@ def afficher_graphiques(liste_indicateurs, df,disposition="1"):
             # Ajout du titre du graphique
             ax.set_title(f"{titre}", fontsize=11, fontweight='bold')
 
+        except Exception as e:
+            print(f"Erreur pour {titre}: {e}")
+
     # Ajustement automatique des espacements et affichage des graphiques
     plt.tight_layout()
     plt.show()
